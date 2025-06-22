@@ -27,10 +27,10 @@ def in_order_traversal(root, result):
         in_order_traversal(root.right, result)
 
 def main():
-    filename = 'data.csv'
-    
+    file_input = 'data.csv'
+    file_output = 'data1.csv'
     # Чтение данных из CSV-файла
-    with open(filename, 'r') as file:
+    with open(file_input, 'r') as file:
         reader = csv.reader(file)
         data = []
         for row in reader:
@@ -52,13 +52,13 @@ def main():
     in_order_traversal(root, sorted_data)
     
     # Запись исходных и отсортированных чисел обратно в файл
-    with open(filename, 'w', newline='') as file:
+    with open(file_output, 'w', newline='') as file:
         writer = csv.writer(file)
         # Записываем пары исходное, отсортированное
-        for original, sorted_num in zip(data, sorted_data):
-            writer.writerow([original, sorted_num])
+        for sorted_num in sorted_data:
+            writer.writerow([sorted_num])
     
-    print(f"Сортировка завершена. Результат записан в файл {filename}")
+    print(f"Сортировка завершена. Результат записан в файл {file_output}")
 
 if __name__ == "__main__":
     main()
