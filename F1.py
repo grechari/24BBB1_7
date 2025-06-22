@@ -26,6 +26,14 @@ def in_order_traversal(root, result):
         result.append(root.value)
         in_order_traversal(root.right, result)
 
+# def fill_csv():
+#     pass
+
+
+# def choce_csv():
+#     pass
+
+
 def main():
     file_input = 'data.csv'
     file_output = 'data1.csv'
