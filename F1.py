@@ -70,9 +70,9 @@ def fill_csv(filename):
     if choice=='1':
         manual_input(filename)
     if choice=='2':
-        count = int(input("Введите количество чисел в массиве"))
-        min_val = int(input("Введите нижнюю границу диапазона"))
-        max_val = int(input("Введите верхнюю границу диапазона"))
+        count = int(input("Введите количество чисел в массиве: "))
+        min_val = int(input("Введите нижнюю границу диапазона: "))
+        max_val = int(input("Введите верхнюю границу диапазона: "))
         generate_random_numbers(filename,count, min_val, max_val)
 
 
